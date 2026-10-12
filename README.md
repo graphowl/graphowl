@@ -1,3 +1,10 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-lockup-dark.svg">
+    <img src="assets/logo-lockup.svg" alt="GraphOWL" width="360">
+  </picture>
+</p>
+
 # GraphOWL
 
 A knowledge graph engine for enterprise metadata. GraphOWL stores, queries, reasons over and validates metadata as one connected graph; history, rules and validation are part of the engine.
@@ -34,7 +41,7 @@ Three layers, one product:
 
 ## Licence
 
-The text in this repository is licensed under [Creative Commons Attribution 4.0](LICENSE). The GraphOWL product itself is proprietary and all rights are reserved. Libraries and examples published in other repositories carry their own licence, stated in each.
+The text in this repository is licensed under [Creative Commons Attribution 4.0](LICENSE). **The GraphOWL name and logos (in `assets/` and `brand/`) are not covered by that licence** — see [`brand/README.md`](brand/README.md). The GraphOWL product itself is proprietary and all rights are reserved. Libraries and examples published in other repositories carry their own licence, stated in each.
 
 ## Contact
 

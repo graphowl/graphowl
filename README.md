@@ -61,6 +61,14 @@ Most organisations know their data in pieces: a table here, a spreadsheet there,
 
 It is **not** a metadata catalog with a graph bolted on, and it is not tied to one industry. A data catalog, a compliance model or a product domain is one *pack* of models and rules on the same engine.
 
+## How it behaves
+
+Three properties that follow from how the engine is built.
+
+<p align="center"><img src="assets/time-travel.svg" alt="Every fact keeps its history; an asOf cursor sits between two transactions" width="900"></p>
+<p align="center"><img src="assets/review-flow.svg" alt="Proposals flow from software and agents to a review queue, the approved model, then the graph" width="900"></p>
+<p align="center"><img src="assets/reasoning.svg" alt="Stated facts and a derived conclusion marked as derived" width="900"></p>
+
 ## See it
 
 The live demo runs on **Northfield Dairy Cooperative**, a synthetic organisation, so there is no real data in it. Its source database holds farms, milk lots, quality tests, production batches and retail sales.
@@ -84,6 +92,8 @@ Three layers, one product; the engine is the foundation.
 - **Domain models** — ontologies, glossaries, rules and expectations, kept in the graph itself and reviewed before they take effect. Packs bundle them per domain, so the same engine serves a data catalog, a compliance model or a product domain.
 - **Context layer** — ways for people and agents to use the graph: an MCP server, semantic search, the API and the console.
 
+<p align="center"><img src="assets/api-surface.svg" alt="The console, HTTP API, MCP server and operations routes around the engine" width="900"></p>
+
 ### Design commitments
 
 - **Provenance over convenience.** Every fact says where it came from; inferred facts are marked as inferred.
@@ -106,6 +116,8 @@ The ingestion libraries batch large pushes, attach an idempotency key so a retry
 
 ## For AI agents
 
+<p align="center"><img src="assets/mcp-flow.svg" alt="An AI assistant calls the MCP server, which offers five families of tools over the graph" width="900"></p>
+
 GraphOWL speaks MCP, so an agent can look up what a term means, follow relationships, run a query, and record what it found, with every answer traceable to the facts and rules behind it. Context is only useful to an agent if it is *current*, *reviewed* and *attributable*; those three are properties of the engine, not of the prompt.
 
 ## What you can build
@@ -115,6 +127,17 @@ GraphOWL speaks MCP, so an agent can look up what a term means, follow relations
 - **A compliance rule set** that reports which records break which rule, and why.
 - **Context for AI assistants** that is reviewed, dated and traceable.
 - **Answers across sources** without first copying everything into one place.
+
+## Worked scenarios
+
+Each cookbook starts from a question someone actually asks, and every query was run against the live demo.
+
+| Cookbook | Question |
+|---|---|
+| [Dairy traceability](https://docs.graphowl.app/cookbooks/dairy-traceability/) | A quality test failed: which lot, which batches, which retailers to call? |
+| [A data catalog](https://docs.graphowl.app/cookbooks/data-catalog/) | What do we have, who owns it, what depends on it? |
+| [Rules and compliance](https://docs.graphowl.app/cookbooks/compliance-rules/) | Which records break which rule, and has anyone accepted the exception? |
+| [Agent memory](https://docs.graphowl.app/cookbooks/agent-memory/) | How does an assistant remember what it learned, on the record? |
 
 ## Try the API
 

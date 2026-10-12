@@ -207,6 +207,9 @@ This is the **public home** of GraphOWL: where releases are announced, where pro
 | Bug reports and feature requests | [Issues](../../issues) | Live |
 | Questions and discussion | [Discussions](../../discussions) | Live |
 | How to report a vulnerability | [`SECURITY.md`](SECURITY.md) | Live |
+| Everything public, indexed | [`docs/README.md`](docs/README.md) | Live |
+| Roadmap | [`ROADMAP.md`](ROADMAP.md) | Live |
+| Getting help | [`SUPPORT.md`](SUPPORT.md) | Live |
 | Documentation: quickstart, concepts, guides, MCP and agents, API reference | [docs.graphowl.app](https://docs.graphowl.app) (source: [`graphowl/docs`](https://github.com/graphowl/docs)) | Live, growing |
 | Client libraries | [`sdk-python`](https://github.com/graphowl/sdk-python), [`sdk-typescript`](https://github.com/graphowl/sdk-typescript), [`python-client`](https://github.com/graphowl/python-client) (Apache-2.0) | Live, early access |
 | Run it yourself: compose file and steps for the early-access container | [`run/`](run) | Live; image access on request |

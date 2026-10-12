@@ -20,6 +20,23 @@ Status key: ✅ built · 🔧 in progress · 🗒️ planned · ⛔ not planned
 | RDF/XML and TriG over the API | 🗒️ |
 | Federated query (SPARQL 1.2) | ⛔ not claimed |
 
+## Semantic access and governance
+
+| Capability | Status |
+|---|---|
+| Virtual graphs: query a source in place through an approved mapping | ✅ |
+| Source-to-model mappings with review, workspace isolation | ✅ |
+| Competency questions run against a model and a sample (coverage) | ✅ |
+| Model diffs and model health reports | ✅ |
+| Ontology-aware planning across several sources (pushdown, transfer cost) | 🗒️ |
+| Change-impact analysis before a model or mapping change is approved | 🗒️ |
+| Answer-level traces: question, mapping, generated source query, source rows | 🗒️ |
+| Business questions as regression tests on every proposed change; pack quality scorecard | 🗒️ |
+| Governed writes through virtual graphs | 🗒️ |
+| Versioning of ontology, mappings, rules and vocabulary together, with rollback | 🗒️ |
+| Detecting and repairing mappings when a source schema changes | 🗒️ |
+| Semantic guardrails: check an agent's request against permitted classes, relations and policies before it runs | 🗒️ |
+
 ## People and agents
 
 | Capability | Status |

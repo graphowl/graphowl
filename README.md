@@ -5,16 +5,17 @@
   </picture>
 </p>
 
-<h3 align="center">The knowledge graph engine.</h3>
+<h3 align="center">The semantic layer for your data and your agents.</h3>
 
 <p align="center">
-  Model, query, reason over and validate connected knowledge —<br>
-  from your databases, documents and systems.
+  Describe your business once. GraphOWL maps it to your databases,<br>
+  answers questions in your own concepts, explains every answer,<br>
+  and keeps AI agents inside the rules.
 </p>
 
 <p align="center">
   <a href="https://graphowl.app"><img alt="Website" src="https://img.shields.io/badge/website-graphowl.app-0498ab?style=flat-square"></a>
-  <a href="https://demo.graphowl.app"><img alt="Live demo" src="https://img.shields.io/badge/live%20demo-on%20request-0b1f3f?style=flat-square"></a>
+  <a href="https://demo.graphowl.app/__access"><img alt="Live demo" src="https://img.shields.io/badge/live%20demo-book%20a%20passcode-0b1f3f?style=flat-square"></a>
   <a href="api/openapi.json"><img alt="OpenAPI" src="https://img.shields.io/badge/OpenAPI-3-5cc7d8?style=flat-square"></a>
   <a href="docs/standards.md"><img alt="Standards" src="https://img.shields.io/badge/W3C-RDF%20%C2%B7%20SPARQL%20%C2%B7%20SHACL%20%C2%B7%20OWL%202%20RL-0498ab?style=flat-square"></a>
   <img alt="Built with Rust" src="https://img.shields.io/badge/built%20with-Rust-dea584?style=flat-square&logo=rust&logoColor=white">
@@ -47,7 +48,7 @@
 
 ## What it does
 
-Most organisations know their data in pieces: a table here, a spreadsheet there, a rule in somebody's head. GraphOWL turns those pieces into **one graph that knows what things mean** — and then lets people and AI agents ask it questions, check it against rules and trust the answers.
+Most organisations know their data in pieces: a table here, a spreadsheet there, a rule in somebody's head. GraphOWL gives them **one semantic model that knows what things mean** and puts it to work: it reaches the data where it lives, justifies each answer, governs how the model changes, and constrains the AI agents that use it.
 
 | | |
 |---|---|
@@ -60,6 +61,26 @@ Most organisations know their data in pieces: a table here, a spreadsheet there,
 | **Serve** | An HTTP API, an MCP server for AI agents, and a console for people — all on the same engine. |
 
 It is **not** a metadata catalog with a graph bolted on, and it is not tied to one industry. A data catalog, a compliance model or a product domain is one *pack* of models and rules on the same engine.
+
+## One model, four jobs
+
+A semantic model is only useful if it does work. GraphOWL uses the same approved model to reach data, justify answers, govern change and constrain agents.
+
+| Job | What it means |
+|---|---|
+| **Access: ask in business concepts** | A model maps `Farm`, `MilkLot` and `QualityMeasurement` to real tables, columns and keys. A **virtual graph** answers a question from the source database itself, so the data does not have to move. |
+| **Trust: know why an answer is what it is** | Every fact keeps its source and its history. Reasoning is stored apart and **marked as derived**, with the rule that produced it, so a conclusion can be checked or challenged. |
+| **Change: evolve the model safely** | Proposals, a review queue and decisions with reasons. Model diffs and competency questions show what a change touches before it takes effect. |
+| **Agents: stay inside the rules** | An MCP server with 101 tools, workspace-scoped sessions and grants. Refusals are recorded. Agents propose; people decide. |
+
+## What people use it for
+
+- **Query data where it lives.** Business questions in domain concepts, translated to the source database through approved mappings, without bulk-copying it into a graph store.
+- **From vocabulary to executable semantics.** Take a term from candidate to class, property and source mapping, with validation and a query at the end of the path.
+- **Guardrails for AI agents.** Agents work through the model: scoped to a workspace, limited by a grant, proposing changes that a person approves.
+- **One meaning, many systems.** Reconcile inconsistent terms across databases and applications while keeping what each source means.
+- **Compliance rules.** Say which records break which rule, and why, with the evidence one click away.
+- **A data catalog.** Definitions, owners and lineage queried like any other fact, in the same graph as the domain model.
 
 ## How it behaves
 
@@ -78,7 +99,7 @@ The live demo runs on **Northfield Dairy Cooperative**, a synthetic organisation
 3. **Load** — a bounded sample of rows becomes instances of the approved classes.
 4. **Use** — explore the graph, ask questions in SPARQL or as graph patterns, and see how much of the model is covered and documented.
 
-The demo is password-protected while GraphOWL is in early access. **To get a login, email <connect@graphowl.app>.**
+Access is by passcode while GraphOWL is in early access. **[Book a 20-minute walkthrough](https://demo.graphowl.app/__access)** and a passcode is shown straight after booking (or email <connect@graphowl.app>). It is valid for seven days.
 
 ## How it works
 
@@ -172,7 +193,7 @@ The same body shape works for Cypher at `POST /cypher`. Other routes you will re
 | `POST /mcp` | The MCP endpoint for AI agents |
 | `GET /health` · `GET /ready` | Liveness and readiness |
 
-The demo is password-protected, so these calls need a login first (see [See it](#see-it)).
+On the demo, the passcode is the bearer token: `export TOKEN=OWL-XXXX-XXXX` (see [See it](#see-it)).
 
 ## Built in Rust
 
@@ -219,6 +240,17 @@ This is the **public home** of GraphOWL: where releases are announced, where pro
 
 "Planned" means exactly that: not published yet, and no date is promised.
 
+## Where it is going
+
+GraphOWL is early access. These are the capabilities we are building toward, in no particular order; they are not all in the demo today. [Known limits](https://docs.graphowl.app/reference/limits/) and the [roadmap](ROADMAP.md) say what is.
+
+- **Plan across sources.** An ontology-aware planner that chooses where each part of a question runs, pushes work down to the databases and keeps data transfer small.
+- **Know what a change will break.** Before a class, property or mapping changes, list the queries, constraints, virtual graphs and derived facts it affects.
+- **Trace every answer.** From the business question, through ontology terms and approved mappings, to the generated source query and the rows that support the result.
+- **Test the model.** Business questions as executable regression tests run on every proposed change, with a quality scorecard for each pack.
+- **Governed writes.** Change a business fact through the model and propagate it to the right source with authorization, validation and an audit trail.
+- **Version the whole model.** Ontology, mappings, rules and vocabulary versioned together, reviewed as semantic diffs, and reversible.
+
 ## Roadmap
 
 Early access means the surface is still moving. What is being worked on, in the order it is likely to land:
@@ -254,7 +286,7 @@ Yes. An MCP server exposes the graph to agents, and every answer can be traced t
 Yes. Facts export as Turtle, JSON-LD, N-Triples and N-Quads. See [`docs/standards.md`](docs/standards.md) for what is and is not supported.
 
 **How do I try it?**
-Email <connect@graphowl.app> for a demo login.
+[Book a walkthrough](https://demo.graphowl.app/__access) for a passcode, or email <connect@graphowl.app>.
 
 ## Licence
 

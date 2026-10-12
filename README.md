@@ -125,16 +125,16 @@ Ask a SPARQL question:
 curl -X POST https://demo.graphowl.app/sparql \
   -H "Authorization: Bearer $TOKEN" \
   -H "Content-Type: application/json" \
-  -d '{"query": "SELECT ?class (COUNT(?s) AS ?n) WHERE { ?s a ?class } GROUP BY ?class ORDER BY DESC(?n)"}'
+  -d '{"query": "SELECT ?class (COUNT(?s) AS ?n) WHERE { GRAPH ?g { ?s a ?class } } GROUP BY ?class ORDER BY DESC(?n)"}'
 ```
 
-Ask a question as it stood at an earlier moment (`asOf` is an RFC 3339 timestamp; leave it out for now):
+Ask a question as it stood at an earlier moment (`asOf` is an RFC 3339 timestamp; leave it out for now). Imported facts live in named graphs, hence `GRAPH ?g`:
 
 ```bash
 curl -X POST https://demo.graphowl.app/sparql \
   -H "Authorization: Bearer $TOKEN" \
   -H "Content-Type: application/json" \
-  -d '{"query": "SELECT * WHERE { ?s ?p ?o } LIMIT 10", "asOf": "2026-10-01T00:00:00Z"}'
+  -d '{"query": "SELECT (COUNT(*) AS ?n) WHERE { GRAPH ?g { ?s ?p ?o } }", "asOf": "2026-10-12T15:50:00Z"}'
 ```
 
 The same body shape works for Cypher at `POST /cypher`. Other routes you will reach for first:

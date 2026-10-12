@@ -1,25 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="GraphOWL"><rect width="256" height="256" rx="58" fill="#e9f6f9"/><g transform="translate(30 30) scale(.766)">
-  <path d="M44 50L102 74Q128 66 154 74L212 50L220 112C224 182 188 240 128 240C68 240 32 182 36 112Z" fill="#0b2f4a"/>
-  <path d="M36 120C35 186 70 240 128 240C90 234 56 190 56 144Z" fill="#0f7f92" opacity=".6"/>
-  <path d="M220 120C221 186 186 240 128 240C166 234 200 190 200 144Z" fill="#5cc7d8" opacity=".4"/>
-  <path d="M50 58L90 76L58 92Z" fill="#0f7f92"/>
-  <path d="M206 58L166 76L198 92Z" fill="#0f7f92"/>
-  <path d="M128 92C150 80 196 84 204 124C208 150 178 160 128 160C78 160 48 150 52 124C60 84 106 80 128 92Z" fill="#10436a"/>
-  <ellipse cx="128" cy="200" rx="50" ry="34" fill="#10436a"/>
-  <circle cx="91" cy="122" r="31" fill="#f2fafc"/>
-  <circle cx="165" cy="122" r="31" fill="#f2fafc"/>
-  <circle cx="91" cy="122" r="19" fill="#0f7f92"/>
-  <circle cx="165" cy="122" r="19" fill="#0f7f92"/>
-  <circle cx="91" cy="122" r="8" fill="#0b2f4a"/>
-  <circle cx="165" cy="122" r="8" fill="#0b2f4a"/>
-  <circle cx="96.5" cy="116.5" r="3" fill="#fff"/>
-  <circle cx="170.5" cy="116.5" r="3" fill="#fff"/>
-  <path d="M117 148H139L128 170Z" fill="#5cc7d8"/>
-  <g fill="none" stroke="#5cc7d8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M100 196L128 188L156 196L128 220ZM100 196L128 220M128 188V220"/>
+  <ellipse cx="106" cy="238" rx="13" ry="6" fill="#f5a524"/>
+  <ellipse cx="150" cy="238" rx="13" ry="6" fill="#f5a524"/>
+  <path d="M128 232C64 232 34 190 34 128C34 100 40 82 52 66Q48 36 78 46L106 66Q128 58 150 66L178 46Q208 36 204 66C216 82 222 100 222 128C222 190 192 232 128 232Z" fill="#0b2f4a"/>
+  <path d="M52 66Q48 36 78 46L92 54Q64 52 60 80Z" fill="#0f7f92"/>
+  <path d="M204 66Q208 36 178 46L164 54Q192 52 196 80Z" fill="#0f7f92"/>
+  <path d="M38 150C30 188 54 214 78 208C70 186 64 168 38 150Z" fill="#0f7f92"/>
+  <path d="M218 150C226 188 202 214 178 208C186 186 192 168 218 150Z" fill="#0f7f92"/>
+  <ellipse cx="128" cy="192" rx="50" ry="36" fill="#e6f5f8"/>
+  <circle cx="91" cy="116" r="36" fill="#f2fafc"/>
+  <circle cx="165" cy="116" r="36" fill="#f2fafc"/>
+  <circle cx="93" cy="119" r="23" fill="#0f7f92"/>
+  <circle cx="163" cy="119" r="23" fill="#0f7f92"/>
+  <circle cx="93" cy="119" r="13" fill="#0b2f4a"/>
+  <circle cx="163" cy="119" r="13" fill="#0b2f4a"/>
+  <circle cx="100" cy="111" r="6.5" fill="#fff"/>
+  <circle cx="170" cy="111" r="6.5" fill="#fff"/>
+  <circle cx="87" cy="127" r="2.8" fill="#fff"/>
+  <circle cx="157" cy="127" r="2.8" fill="#fff"/>
+  <path d="M118 148Q128 142 138 148L128 164Z" fill="#f5a524" stroke="#f5a524" stroke-width="4" stroke-linejoin="round"/>
+  <g fill="none" stroke="#0f7f92" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M102 190L128 182L154 190L128 212ZM102 190L128 212M128 182V212"/>
   </g>
-  <circle cx="100" cy="196" r="6.5" fill="#f2fafc"/>
-  <circle cx="156" cy="196" r="6.5" fill="#f2fafc"/>
-  <circle cx="128" cy="188" r="7" fill="#5cc7d8"/>
-  <circle cx="128" cy="220" r="6.5" fill="#5cc7d8"/>
+  <circle cx="102" cy="190" r="6" fill="#0b2f4a"/>
+  <circle cx="154" cy="190" r="6" fill="#0b2f4a"/>
+  <circle cx="128" cy="182" r="6.5" fill="#0f7f92"/>
+  <circle cx="128" cy="212" r="6" fill="#0f7f92"/>
 </g></svg>

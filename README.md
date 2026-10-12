@@ -99,7 +99,7 @@ The live demo runs on **Northfield Dairy Cooperative**, a synthetic organisation
 3. **Load** — a bounded sample of rows becomes instances of the approved classes.
 4. **Use** — explore the graph, ask questions in SPARQL or as graph patterns, and see how much of the model is covered and documented.
 
-Access is by booking while GraphOWL is in early access. **[Book a time](https://demo.graphowl.app/__access/book)** and choose either **20 minutes of exclusive hands-on access** to the live demo (you get a passcode that works only in your slot; afterwards the demo is restored to its original data), or a **30-minute walkthrough call** with the author.
+Access is by booking while GraphOWL is in early access. **[Book a time](https://demo.graphowl.app/__access/book)** and choose either **20 minutes of exclusive hands-on access** to the live demo (you get a passcode that works only in your slot; afterwards the demo is restored to its original data), or a **30-minute walkthrough call** with the author (two times a week, opened by hand).
 
 ## How it works
 

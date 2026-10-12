@@ -23,6 +23,7 @@
 </p>
 
 <p align="center">
+  <a href="https://graphowl.app/docs">Docs</a> ·
   <a href="#what-it-does">What it does</a> ·
   <a href="#see-it">See it</a> ·
   <a href="#how-it-works">How it works</a> ·
@@ -183,7 +184,7 @@ This is the **public home** of GraphOWL: where releases are announced, where pro
 | Bug reports and feature requests | [Issues](../../issues) | Live |
 | Questions and discussion | [Discussions](../../discussions) | Live |
 | How to report a vulnerability | [`SECURITY.md`](SECURITY.md) | Live |
-| Further documentation | this repository | Planned |
+| Documentation: quickstart, concepts, guides, MCP and agents, API reference | [graphowl.app/docs](https://graphowl.app/docs) (source: [`graphowl/docs`](https://github.com/graphowl/docs)) | Live, growing |
 | Client libraries | [`sdk-python`](https://github.com/graphowl/sdk-python), [`sdk-typescript`](https://github.com/graphowl/sdk-typescript), [`python-client`](https://github.com/graphowl/python-client) (Apache-2.0) | Live, early access |
 | Early-access evaluation licence (draft, awaiting legal review) | [`legal/EVALUATION-LICENSE.md`](legal/EVALUATION-LICENSE.md) | Draft |
 | Software bill of materials and third-party licences | [`compliance/`](compliance) | Live |
@@ -199,7 +200,8 @@ Early access means the surface is still moving. What is being worked on, in the 
 - [x] Console: workspaces, model review, graph exploration
 - [x] Public API description and standards page
 - [x] Client libraries: ingestion (Python, TypeScript) and a Python client for reading and governing
-- [ ] Documentation site, product site and a quickstart that a stranger can follow
+- [x] Documentation site with a quickstart, concepts, guides, MCP and agent pages and a generated API and tool reference
+- [ ] Product site rebuilt around the docs, with cookbooks and a comparison page
 - [x] Runnable examples and synthetic sample data
 - [ ] Sample packs and the pack format documented
 - [x] Software bill of materials and licence report (regenerated for each release)

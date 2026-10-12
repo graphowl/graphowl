@@ -185,7 +185,7 @@ This is the **public home** of GraphOWL: where releases are announced, where pro
 | Further documentation | this repository | Planned |
 | Client libraries | [`sdk-python`](https://github.com/graphowl/sdk-python), [`sdk-typescript`](https://github.com/graphowl/sdk-typescript) (Apache-2.0) | Live, early access |
 | Software bill of materials and third-party licences | [`compliance/`](compliance) | Live |
-| Runnable examples and synthetic sample data | a separate repository, Apache-2.0 | Planned |
+| Runnable examples and synthetic sample data | [`examples`](https://github.com/graphowl/examples) (Apache-2.0) | Live, early access |
 
 "Planned" means exactly that: not published yet, and no date is promised.
 
@@ -197,7 +197,8 @@ Early access means the surface is still moving. What is being worked on, in the 
 - [x] Console: workspaces, model review, graph exploration
 - [x] Public API description and standards page
 - [x] Ingestion client libraries (Python, TypeScript)
-- [ ] Runnable examples and synthetic sample packs
+- [x] Runnable examples and synthetic sample data
+- [ ] Sample packs and the pack format documented
 - [ ] Documentation site
 - [x] Software bill of materials and licence report (regenerated for each release)
 - [ ] Published benchmarks, with the method that produced them

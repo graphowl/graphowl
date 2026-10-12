@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/graphowl/graphowl/security/policy
+    about: Please do not open a public issue for a vulnerability. Follow the security policy.
+  - name: Ask a question or start a discussion
+    url: https://github.com/graphowl/graphowl/discussions
+    about: Questions, ideas and "how do I" belong in Discussions.
+  - name: Request demo access
+    url: mailto:connect@graphowl.app?subject=GraphOWL%20demo%20access
+    about: The live demo is password-protected during early access.

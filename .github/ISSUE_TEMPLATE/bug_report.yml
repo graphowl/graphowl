@@ -1,0 +1,41 @@
+name: Bug report
+description: Something in the demo or the website does not work as it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please do not include real credentials or personal data. The demo contains synthetic data only.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you do, and what did you see?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The page you were on, what you clicked or sent, in order.
+    validations:
+      required: true
+  - type: input
+    id: when
+    attributes:
+      label: Date and time (with time zone)
+      description: Helps us find it in the logs.
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and operating system
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots, error text, or anything else

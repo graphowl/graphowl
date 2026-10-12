@@ -186,6 +186,7 @@ This is the **public home** of GraphOWL: where releases are announced, where pro
 | How to report a vulnerability | [`SECURITY.md`](SECURITY.md) | Live |
 | Documentation: quickstart, concepts, guides, MCP and agents, API reference | [graphowl.app/docs](https://graphowl.app/docs) (source: [`graphowl/docs`](https://github.com/graphowl/docs)) | Live, growing |
 | Client libraries | [`sdk-python`](https://github.com/graphowl/sdk-python), [`sdk-typescript`](https://github.com/graphowl/sdk-typescript), [`python-client`](https://github.com/graphowl/python-client) (Apache-2.0) | Live, early access |
+| Run it yourself: compose file and steps for the early-access container | [`run/`](run) | Live; image access on request |
 | Early-access evaluation licence (draft, awaiting legal review) | [`legal/EVALUATION-LICENSE.md`](legal/EVALUATION-LICENSE.md) | Draft |
 | Software bill of materials and third-party licences | [`compliance/`](compliance) | Live |
 | Runnable examples and synthetic sample data | [`examples`](https://github.com/graphowl/examples) (Apache-2.0) | Live, early access |

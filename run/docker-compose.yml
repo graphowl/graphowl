@@ -1,0 +1,30 @@
+# GraphOWL early-access evaluation stack: PostgreSQL (with pgvector) and the server.
+# Provided under the early-access evaluation licence; see ../legal/EVALUATION-LICENSE.md.
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?copy .env.example to .env and set it}
+      POSTGRES_DB: graphowl
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d graphowl"]
+      interval: 5s
+      retries: 10
+
+  server:
+    image: ${GRAPHOWL_IMAGE:?copy .env.example to .env and set it}
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://postgres:${POSTGRES_PASSWORD}@db:5432/graphowl
+    ports:
+      # Localhost only: with no identity provider configured the server is in open mode.
+      - "127.0.0.1:${GRAPHOWL_PORT:-8080}:8080"
+
+volumes:
+  pgdata:

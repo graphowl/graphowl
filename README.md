@@ -39,6 +39,10 @@
 
 ---
 
+<p align="center">
+  <img src="assets/pipeline.svg" alt="From sources to answers: connect, model, review, ask and check, serve" width="900">
+</p>
+
 ## What it does
 
 Most organisations know their data in pieces: a table here, a spreadsheet there, a rule in somebody's head. GraphOWL turns those pieces into **one graph that knows what things mean** — and then lets people and AI agents ask it questions, check it against rules and trust the answers.
@@ -70,33 +74,9 @@ The demo is password-protected while GraphOWL is in early access. **To get a log
 
 Three layers, one product; the engine is the foundation.
 
-```mermaid
-flowchart TB
-    subgraph U[People and agents]
-        C[Console]
-        A[AI agents via MCP]
-        K[Your code via the HTTP API]
-    end
-    subgraph M[Domain models]
-        R[Review and approval]
-        P[Packs: ontologies, glossaries, rules, expectations]
-    end
-    subgraph E[Engine]
-        T[(Triple store with history)]
-        Q[SPARQL, Cypher subset, traversal, search]
-        Z[OWL 2 RL reasoning]
-        V[Constraint validation]
-    end
-    S[(Databases, files, systems)] --> R
-    R --> P --> T
-    S -. query in place .-> Q
-    T --- Q
-    T --- Z
-    T --- V
-    C --> Q
-    A --> Q
-    K --> Q
-```
+<p align="center">
+  <img src="assets/architecture.svg" alt="GraphOWL architecture: people, agents and code on top of domain models, on top of the engine" width="900">
+</p>
 
 - **Engine** — a triple store with time travel, constraint validation, reasoning and graph query.
 - **Domain models** — ontologies, glossaries, rules and expectations, kept in the graph itself and reviewed before they take effect. Packs bundle them per domain, so the same engine serves a data catalog, a compliance model or a product domain.
@@ -109,6 +89,29 @@ flowchart TB
 - **Read-only toward your sources.** Source databases are read through read-only roles.
 - **Standards first.** The data model and query languages are W3C standards, so your data is not locked in. What is and is not implemented is stated, dated, in [`docs/standards.md`](docs/standards.md).
 - **Honest status.** This page says "early access" because it is early access.
+
+## Use it from code
+
+Two small client libraries push data in (Apache-2.0, early access, not yet on PyPI or npm):
+
+| Library | Repository |
+|---|---|
+| Python, no runtime dependencies | [`graphowl/sdk-python`](https://github.com/graphowl/sdk-python) |
+| TypeScript, types generated from the API description | [`graphowl/sdk-typescript`](https://github.com/graphowl/sdk-typescript) |
+
+Both batch large pushes, attach an idempotency key so a retry never duplicates, and report a verdict per item. Reading goes through the [HTTP API](api/openapi.json), which any OpenAPI generator can turn into a client.
+
+## For AI agents
+
+GraphOWL speaks MCP, so an agent can look up what a term means, follow relationships, run a query, and record what it found, with every answer traceable to the facts and rules behind it. Context is only useful to an agent if it is *current*, *reviewed* and *attributable*; those three are properties of the engine, not of the prompt.
+
+## What you can build
+
+- **A data catalog** whose definitions, owners and lineage are queried like any other fact.
+- **A domain model** for a business area, checked against the data that is supposed to follow it.
+- **A compliance rule set** that reports which records break which rule, and why.
+- **Context for AI assistants** that is reviewed, dated and traceable.
+- **Answers across sources** without first copying everything into one place.
 
 ## Try the API
 
@@ -162,7 +165,8 @@ This is the **public home** of GraphOWL: where releases are announced, where pro
 | Questions and discussion | [Discussions](../../discussions) | Live |
 | How to report a vulnerability | [`SECURITY.md`](SECURITY.md) | Live |
 | Further documentation | this repository | Planned |
-| Client libraries (Python, TypeScript) | separate repositories, Apache-2.0 | Planned |
+| Client libraries | [`sdk-python`](https://github.com/graphowl/sdk-python), [`sdk-typescript`](https://github.com/graphowl/sdk-typescript) (Apache-2.0) | Live, early access |
+| Software bill of materials and third-party licences | [`compliance/`](compliance) | Live |
 | Runnable examples and synthetic sample data | a separate repository, Apache-2.0 | Planned |
 
 "Planned" means exactly that: not published yet, and no date is promised.
@@ -174,9 +178,10 @@ Early access means the surface is still moving. What is being worked on, in the 
 - [x] Engine: triple store with history, SPARQL, reasoning, validation
 - [x] Console: workspaces, model review, graph exploration
 - [x] Public API description and standards page
-- [ ] Client libraries and runnable examples
+- [x] Ingestion client libraries (Python, TypeScript)
+- [ ] Runnable examples and synthetic sample packs
 - [ ] Documentation site
-- [ ] Software bill of materials and licence report for each release
+- [x] Software bill of materials and licence report (regenerated for each release)
 - [ ] Published benchmarks, with the method that produced them
 
 No dates are promised. Watch [releases](../../releases) or the [changelog](CHANGELOG.md).

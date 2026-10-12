@@ -8,7 +8,7 @@
 | Report a bug | [Open an issue](../../issues/new/choose) with the version, the route or tool, the request and what happened |
 | Suggest a feature | A [feature request](../../issues/new?template=feature_request.yml), describing the problem you want solved |
 | Report a vulnerability | **Not in public.** See [SECURITY.md](SECURITY.md) |
-| Get a demo passcode | [Book a walkthrough](https://demo.graphowl.app/__access) and it is shown straight away; or email <connect@graphowl.app> |
+| Get a demo passcode | [Book a time](https://demo.graphowl.app/__access/book) (20 minutes hands-on, or a walkthrough call); the passcode is shown straight away; or email <connect@graphowl.app> |
 | Ask for access to the early-access container | Email <connect@graphowl.app> |
 
 ## What helps us help you

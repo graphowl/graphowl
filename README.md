@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://graphowl.app"><img alt="Website" src="https://img.shields.io/badge/website-graphowl.app-0498ab?style=flat-square"></a>
-  <a href="https://demo.graphowl.app/__access"><img alt="Live demo" src="https://img.shields.io/badge/live%20demo-book%20a%20passcode-0b1f3f?style=flat-square"></a>
+  <a href="https://demo.graphowl.app/__access/book"><img alt="Live demo" src="https://img.shields.io/badge/live%20demo-book%20a%20passcode-0b1f3f?style=flat-square"></a>
   <a href="api/openapi.json"><img alt="OpenAPI" src="https://img.shields.io/badge/OpenAPI-3-5cc7d8?style=flat-square"></a>
   <a href="docs/standards.md"><img alt="Standards" src="https://img.shields.io/badge/W3C-RDF%20%C2%B7%20SPARQL%20%C2%B7%20SHACL%20%C2%B7%20OWL%202%20RL-0498ab?style=flat-square"></a>
   <img alt="Built with Rust" src="https://img.shields.io/badge/built%20with-Rust-dea584?style=flat-square&logo=rust&logoColor=white">
@@ -54,7 +54,7 @@ Most organisations know their data in pieces: a table here, a spreadsheet there,
 |---|---|
 | **Connect** | Read a source database through a read-only role, load files, or query a source in place as a virtual graph. Nothing in the console can change the source. |
 | **Model** | Propose an ontology from what is already there. A person reviews every class, relation and rule before it takes effect — nothing is published unreviewed. |
-| **Query** | SPARQL, a documented Cypher subset, graph traversal, keyword and semantic search — over the same facts. |
+| **Query** | SPARQL, a documented openCypher subset, graph traversal, keyword and semantic search — over the same facts. |
 | **Reason** | OWL 2 RL reasoning derives what follows from the model, and marks it as derived, so inferred facts are never mistaken for stated ones. |
 | **Validate** | SHACL-style constraints and quality expectations check the data against the model and report what does not fit. |
 | **Remember** | Every fact keeps its history. Nothing is deleted, only retracted, so any question can be asked *as of* an earlier moment. |
@@ -99,7 +99,7 @@ The live demo runs on **Northfield Dairy Cooperative**, a synthetic organisation
 3. **Load** — a bounded sample of rows becomes instances of the approved classes.
 4. **Use** — explore the graph, ask questions in SPARQL or as graph patterns, and see how much of the model is covered and documented.
 
-Access is by passcode while GraphOWL is in early access. **[Book a 20-minute walkthrough](https://demo.graphowl.app/__access)** and a passcode is shown straight after booking (or email <connect@graphowl.app>). It is valid for seven days.
+Access is by booking while GraphOWL is in early access. **[Book a time](https://demo.graphowl.app/__access/book)** and choose either **20 minutes of exclusive hands-on access** to the live demo (you get a passcode that works only in your slot; afterwards the demo is restored to its original data), or a **30-minute walkthrough call** with the author.
 
 ## How it works
 
@@ -182,7 +182,7 @@ curl -X POST https://demo.graphowl.app/sparql \
   -d '{"query": "SELECT (COUNT(*) AS ?n) WHERE { GRAPH ?g { ?s ?p ?o } }", "asOf": "2026-10-12T15:50:00Z"}'
 ```
 
-The same body shape works for Cypher at `POST /cypher`. Other routes you will reach for first:
+The same body shape works for openCypher at `POST /cypher`. Other routes you will reach for first:
 
 | Route | What it does |
 |---|---|
@@ -214,7 +214,7 @@ Storage is PostgreSQL. The engine uses it as a durable, operable home for facts 
 
 ## Standards
 
-GraphOWL is built on W3C standards for graph data: **RDF**, **SPARQL**, **SHACL**, **OWL 2 RL** and **SKOS**, plus a documented Cypher subset. It publishes a dated page saying precisely what it implements, what it does not, and when each statement was last checked: [`docs/standards.md`](docs/standards.md). Nothing there is a certified conformance claim.
+GraphOWL is built on W3C standards for graph data: **RDF**, **SPARQL**, **SHACL**, **OWL 2 RL** and **SKOS**, plus a documented openCypher subset. It publishes a dated page saying precisely what it implements, what it does not, and when each statement was last checked: [`docs/standards.md`](docs/standards.md). Nothing there is a certified conformance claim.
 
 ## What's in this repository
 
@@ -286,11 +286,15 @@ Yes. An MCP server exposes the graph to agents, and every answer can be traced t
 Yes. Facts export as Turtle, JSON-LD, N-Triples and N-Quads. See [`docs/standards.md`](docs/standards.md) for what is and is not supported.
 
 **How do I try it?**
-[Book a walkthrough](https://demo.graphowl.app/__access) for a passcode, or email <connect@graphowl.app>.
+[Book a time](https://demo.graphowl.app/__access/book) for a demo passcode, or email <connect@graphowl.app>.
 
 ## Licence
 
 The text in this repository is licensed under [Creative Commons Attribution 4.0](LICENSE). **The GraphOWL name and logos (in `assets/` and `brand/`) are not covered by that licence** — see [`brand/README.md`](brand/README.md). The GraphOWL product itself is proprietary and all rights are reserved. Libraries and examples published in other repositories carry their own licence, stated in each.
+
+## Names and trademarks
+
+Cypher is a registered trademark of Neo4j, Inc. GraphOWL is not affiliated with or endorsed by Neo4j, Inc. It accepts a subset of **openCypher**, the open specification of that language, and a few forms of ISO/IEC 39075 GQL.
 
 ## Contact
 

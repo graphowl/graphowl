@@ -3,7 +3,7 @@
 | Looking for | Go to |
 |---|---|
 | **Start here** | [Quickstart](https://docs.graphowl.app/start/quickstart/) · [What is GraphOWL](https://docs.graphowl.app/start/what-is-graphowl/) · [Concepts](https://docs.graphowl.app/start/concepts/) |
-| **How-to guides** | [Load data](https://docs.graphowl.app/guides/load-data/) · [SPARQL](https://docs.graphowl.app/guides/query-sparql/) · [Cypher](https://docs.graphowl.app/guides/query-cypher/) · [Search](https://docs.graphowl.app/guides/search/) · [Time travel](https://docs.graphowl.app/guides/time-travel/) · [Reason and validate](https://docs.graphowl.app/guides/reasoning-and-validation/) |
+| **How-to guides** | [Load data](https://docs.graphowl.app/guides/load-data/) · [SPARQL](https://docs.graphowl.app/guides/query-sparql/) · [openCypher](https://docs.graphowl.app/guides/query-cypher/) · [Search](https://docs.graphowl.app/guides/search/) · [Time travel](https://docs.graphowl.app/guides/time-travel/) · [Reason and validate](https://docs.graphowl.app/guides/reasoning-and-validation/) |
 | **Worked scenarios** | [Cookbooks](https://docs.graphowl.app/cookbooks/) |
 | **AI agents and MCP** | [Overview](https://docs.graphowl.app/ai/mcp-overview/) · [Connect a client](https://docs.graphowl.app/ai/connect-a-client/) · [Tools by family](https://docs.graphowl.app/ai/tool-families/) · [Patterns](https://docs.graphowl.app/ai/patterns/) |
 | **API** | [Overview](https://docs.graphowl.app/api/overview/) · [Errors](https://docs.graphowl.app/api/errors/) · [Reference](https://docs.graphowl.app/api/reference/) · [`api/openapi.json`](../api/openapi.json) |

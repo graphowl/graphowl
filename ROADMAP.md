@@ -10,7 +10,7 @@ Status key: ✅ built · 🔧 in progress · 🗒️ planned · ⛔ not planned
 |---|---|
 | Triple store with history and `asOf` queries | ✅ |
 | SPARQL 1.1 query | ✅ |
-| Cypher subset (labels, properties, relationships, filters, counts) | ✅ subset; some functions not yet supported |
+| openCypher subset (labels, properties, relationships, filters, counts) | ✅ subset; some functions not yet supported |
 | OWL 2 RL reasoning, derived facts marked | ✅ |
 | SHACL-style constraints and quality expectations | ✅ with [stated gaps](docs/standards.md) |
 | Virtual graphs (query a source in place) | ✅ |

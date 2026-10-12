@@ -24,7 +24,8 @@ This is the **public home** of GraphOWL: where releases are announced, where pro
 | Bug reports and feature requests | [Issues](../../issues) | Live |
 | Questions and discussion | [Discussions](../../discussions) | Live |
 | How to report a vulnerability | [`SECURITY.md`](SECURITY.md) | Live |
-| Documentation | this repository | Planned |
+| Standards conformance (what is and is not implemented) | [`docs/standards.md`](docs/standards.md) | Live |
+| Further documentation | this repository | Planned |
 | API specification (OpenAPI) | this repository | Planned |
 | Client libraries (Python, TypeScript) | separate repositories, Apache-2.0 | Planned |
 | Runnable examples and synthetic sample data | a separate repository, Apache-2.0 | Planned |

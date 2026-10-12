@@ -93,14 +93,15 @@ Three layers, one product; the engine is the foundation.
 
 ## Use it from code
 
-Two small client libraries push data in (Apache-2.0, early access, not yet on PyPI or npm):
+Client libraries (Apache-2.0, early access, not yet on PyPI or npm):
 
 | Library | Repository |
 |---|---|
-| Python (`graphowl-ingest`), no runtime dependencies | [`graphowl/sdk-python`](https://github.com/graphowl/sdk-python) |
-| TypeScript (`@graphowl/ingest`), types generated from the API description | [`graphowl/sdk-typescript`](https://github.com/graphowl/sdk-typescript) |
+| Python ingestion (`graphowl-ingest`), no runtime dependencies | [`graphowl/sdk-python`](https://github.com/graphowl/sdk-python) |
+| TypeScript ingestion (`@graphowl/ingest`), types generated from the API description | [`graphowl/sdk-typescript`](https://github.com/graphowl/sdk-typescript) |
+| Python client for reading, querying, reasoning and governance (`graphowl`) | [`graphowl/python-client`](https://github.com/graphowl/python-client) |
 
-Both batch large pushes, attach an idempotency key so a retry never duplicates, and report a verdict per item. Reading goes through the [HTTP API](api/openapi.json), which any OpenAPI generator can turn into a client.
+The ingestion libraries batch large pushes, attach an idempotency key so a retry never duplicates, and report a verdict per item. The Python client reads, queries, reasons and governs. Any OpenAPI generator can also turn the [HTTP API description](api/openapi.json) into a client for another language.
 
 ## For AI agents
 
@@ -183,7 +184,7 @@ This is the **public home** of GraphOWL: where releases are announced, where pro
 | Questions and discussion | [Discussions](../../discussions) | Live |
 | How to report a vulnerability | [`SECURITY.md`](SECURITY.md) | Live |
 | Further documentation | this repository | Planned |
-| Client libraries | [`sdk-python`](https://github.com/graphowl/sdk-python), [`sdk-typescript`](https://github.com/graphowl/sdk-typescript) (Apache-2.0) | Live, early access |
+| Client libraries | [`sdk-python`](https://github.com/graphowl/sdk-python), [`sdk-typescript`](https://github.com/graphowl/sdk-typescript), [`python-client`](https://github.com/graphowl/python-client) (Apache-2.0) | Live, early access |
 | Software bill of materials and third-party licences | [`compliance/`](compliance) | Live |
 | Runnable examples and synthetic sample data | [`examples`](https://github.com/graphowl/examples) (Apache-2.0) | Live, early access |
 
@@ -196,10 +197,10 @@ Early access means the surface is still moving. What is being worked on, in the 
 - [x] Engine: triple store with history, SPARQL, reasoning, validation
 - [x] Console: workspaces, model review, graph exploration
 - [x] Public API description and standards page
-- [x] Ingestion client libraries (Python, TypeScript)
+- [x] Client libraries: ingestion (Python, TypeScript) and a Python client for reading and governing
+- [ ] Documentation site, product site and a quickstart that a stranger can follow
 - [x] Runnable examples and synthetic sample data
 - [ ] Sample packs and the pack format documented
-- [ ] Documentation site
 - [x] Software bill of materials and licence report (regenerated for each release)
 - [ ] Published benchmarks, with the method that produced them
 

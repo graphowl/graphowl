@@ -28,7 +28,7 @@ This is the **public home** of GraphOWL: where releases are announced, where pro
 | How to report a vulnerability | [`SECURITY.md`](SECURITY.md) | Live |
 | Standards conformance (what is and is not implemented) | [`docs/standards.md`](docs/standards.md) | Live |
 | Further documentation | this repository | Planned |
-| API specification (OpenAPI) | this repository | Planned |
+| API specification (OpenAPI) | [`api/openapi.json`](api/openapi.json) | Live |
 | Client libraries (Python, TypeScript) | separate repositories, Apache-2.0 | Planned |
 | Runnable examples and synthetic sample data | a separate repository, Apache-2.0 | Planned |
 

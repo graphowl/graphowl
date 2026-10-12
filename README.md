@@ -97,8 +97,8 @@ Two small client libraries push data in (Apache-2.0, early access, not yet on Py
 
 | Library | Repository |
 |---|---|
-| Python, no runtime dependencies | [`graphowl/sdk-python`](https://github.com/graphowl/sdk-python) |
-| TypeScript, types generated from the API description | [`graphowl/sdk-typescript`](https://github.com/graphowl/sdk-typescript) |
+| Python (`graphowl-ingest`), no runtime dependencies | [`graphowl/sdk-python`](https://github.com/graphowl/sdk-python) |
+| TypeScript (`@graphowl/ingest`), types generated from the API description | [`graphowl/sdk-typescript`](https://github.com/graphowl/sdk-typescript) |
 
 Both batch large pushes, attach an idempotency key so a retry never duplicates, and report a verdict per item. Reading goes through the [HTTP API](api/openapi.json), which any OpenAPI generator can turn into a client.
 

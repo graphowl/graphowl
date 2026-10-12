@@ -7,7 +7,9 @@
 
 # GraphOWL
 
-A knowledge graph engine for enterprise metadata. GraphOWL stores, queries, reasons over and validates metadata as one connected graph; history, rules and validation are part of the engine.
+A knowledge graph engine. GraphOWL stores, queries, reasons over and validates connected knowledge — facts from your databases, documents and systems, the vocabulary that gives them meaning, and the rules they must obey. History, reasoning and validation are part of the engine, not add-ons.
+
+It is not a metadata catalog with a graph bolted on. A data catalog is one thing you can build on it; the same engine models a business domain, checks data against an ontology, answers questions across sources and serves context to people and AI agents.
 
 **Status: early access.** The product is under active development and is not yet generally available.
 
@@ -37,7 +39,7 @@ This is the **public home** of GraphOWL: where releases are announced, where pro
 Three layers, one product:
 
 - **Engine** — a triple store with time travel, constraint validation, reasoning and graph query. Every fact keeps its history: nothing is deleted, only retracted.
-- **Catalog** — the enterprise metadata model (entities, hierarchy, governance) expressed in the graph itself, so definitions, ownership and lineage are queried like any other fact.
+- **Domain models** — ontologies, glossaries, rules and expectations, kept in the graph itself and reviewed before they take effect. Packs bundle them per domain, so the same engine serves a data catalog, a compliance model or a product domain. Catalog entities, ownership and lineage are one such model, queried like any other fact.
 - **Context layer** — ways for people and agents to use the graph: an MCP server, semantic search and APIs.
 
 ## Licence

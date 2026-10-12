@@ -17,6 +17,7 @@
   <a href="https://demo.graphowl.app"><img alt="Live demo" src="https://img.shields.io/badge/live%20demo-on%20request-0b1f3f?style=flat-square"></a>
   <a href="api/openapi.json"><img alt="OpenAPI" src="https://img.shields.io/badge/OpenAPI-3-5cc7d8?style=flat-square"></a>
   <a href="docs/standards.md"><img alt="Standards" src="https://img.shields.io/badge/W3C-RDF%20%C2%B7%20SPARQL%20%C2%B7%20SHACL%20%C2%B7%20OWL%202%20RL-0498ab?style=flat-square"></a>
+  <img alt="Built with Rust" src="https://img.shields.io/badge/built%20with-Rust-dea584?style=flat-square&logo=rust&logoColor=white">
   <img alt="Status" src="https://img.shields.io/badge/status-early%20access-orange?style=flat-square">
   <img alt="Licence" src="https://img.shields.io/badge/product-proprietary-lightgrey?style=flat-square">
 </p>
@@ -147,6 +148,23 @@ The same body shape works for Cypher at `POST /cypher`. Other routes you will re
 | `GET /health` · `GET /ready` | Liveness and readiness |
 
 The demo is password-protected, so these calls need a login first (see [See it](#see-it)).
+
+## Built in Rust
+
+The server is written in [Rust](https://www.rust-lang.org), as a workspace of small, single-purpose crates (storage, query, reasoning, validation, search, the HTTP layer and more) rather than one large program. That choice has concrete consequences for what you run:
+
+| What Rust gives | What it means for you |
+|---|---|
+| **Memory safety without a garbage collector** | A whole class of crashes and security flaws (use-after-free, buffer overruns, data races) cannot be written in safe code, and there are no collector pauses to show up as latency spikes. |
+| **Predictable resource use** | A graph engine holds a lot of data and answers many queries at once. Memory is released when it is no longer used, not when a collector gets round to it, so footprint stays steady under load. |
+| **One self-contained server** | The server, the console it serves and the API ship as a single program. There is no runtime or virtual machine to install, and few moving parts to operate. |
+| **Fearless concurrency** | The compiler rejects unsynchronised sharing between threads, so concurrent queries, reasoning runs and imports do not corrupt each other. |
+| **Types that carry the design** | The rules the engine enforces (a fact has a source, a derived fact is marked derived, a model change needs review) are encoded in types, so breaking them is a compile error, not a runtime surprise. |
+| **A short, audited supply chain** | Dependencies are checked on every build against a permissive-only licence allow-list, and the full list is published as a [software bill of materials](compliance/THIRD-PARTY-LICENSES.md). |
+
+Storage is PostgreSQL. The engine uses it as a durable, operable home for facts and their history, and the API and console sit on top.
+
+**What this section does not claim:** no benchmark figures. Speed claims need a published method and data, and those are on the [roadmap](#roadmap), not yet in this repository.
 
 ## Standards
 
